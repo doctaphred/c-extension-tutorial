@@ -48,7 +48,7 @@ write:
    PyObject* a;  /* ... */
    PyObject* b;  /* ... */
 
-   PyObject* result = PyObject_RichCompare(a, b, py_LE);
+   PyObject* result = PyObject_RichCompare(a, b, Py_LE);
    if (!result) {
        /* error handling */
        Py_DECREF(result);
@@ -71,7 +71,7 @@ rewrite the above example with :c:func:`PyObject_RichCompareBool` as:
    PyObject* a;  /* ... */
    PyObject* b;  /* ... */
 
-   int result = PyObject_RichCompareBool(a, b, py_LE);
+   int result = PyObject_RichCompareBool(a, b, Py_LE);
    if (result < 0) {
        /* error handling */
    }
